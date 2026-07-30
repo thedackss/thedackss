@@ -9,7 +9,7 @@
   </style>
   <rect x="1" y="1" width="778" height="468" rx="12" fill="$bg" stroke="$border" stroke-width="2"/>
   <line x1="1" y1="46" x2="779" y2="46" stroke="$border" stroke-width="1"/>
-  <text x="28" y="29" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted">:~$ </tspan>fetch</text>
+  <text x="28" y="29" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted">:~$$ </tspan>fetch</text>
 
   <!-- lightning bolt -->
   <text x="44" y="110" class="t bolt">          ▄██████▀</text>

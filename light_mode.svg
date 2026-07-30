@@ -9,10 +9,7 @@
   </style>
   <rect x="1" y="1" width="778" height="468" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
   <line x1="1" y1="46" x2="779" y2="46" stroke="#d0d7de" stroke-width="1"/>
-  <circle cx="28" cy="24" r="7" fill="#ff5f57"/>
-  <circle cx="52" cy="24" r="7" fill="#febc2e"/>
-  <circle cx="76" cy="24" r="7" fill="#28c840"/>
-  <text x="390" y="29" text-anchor="middle" class="t muted">diego@zar.mx: ~</text>
+  <text x="28" y="29" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted">:~$ </tspan>fetch</text>
 
   <!-- lightning bolt -->
   <text x="44" y="110" class="t bolt">          ▄██████▀</text>
@@ -39,7 +36,7 @@
   <text x="300" y="222" class="t"><tspan class="label">Infra</tspan>:    Docker Swarm · Traefik · Cloudflare</text>
   <text x="300" y="243" class="t muted">─────────────────────────────────────</text>
   <text x="300" y="264" class="t"><tspan class="label">Repos</tspan>:    7 public · <tspan class="label">Followers</tspan>: 3</text>
-  <text x="300" y="285" class="t"><tspan class="label">Commits</tspan>:  1,228 (all time)</text>
+  <text x="300" y="285" class="t"><tspan class="label">Commits</tspan>:  1,229 (all time)</text>
   <text x="300" y="306" class="t"><tspan class="label">Lines</tspan>:    52,427++ · 26,783-- · 25,644 net</text>
   <text x="300" y="327" class="t muted">─────────────────────────────────────</text>
   <text x="300" y="348" class="t"><tspan class="label">Email</tspan>:    diego@zar.mx</text>
