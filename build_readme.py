@@ -19,7 +19,7 @@ API = "https://api.github.com"
 
 WIDTH = 66        # line width in characters
 COL_X = 300       # x of the stats column
-Y0, DY = 48, 22   # first baseline, line height
+Y0, DY = 42, 21   # first baseline, line height
 
 THEMES = {
     "card-dark.svg": {
