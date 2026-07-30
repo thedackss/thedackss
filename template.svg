@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470" xml:space="preserve" role="img" aria-label="Diego Zamora — GitHub profile card">
+  <style>
+    .t { font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 13px; fill: $fg; }
+    .accent { fill: $accent; font-weight: bold; }
+    .label { fill: $accent; }
+    .muted { fill: $muted; }
+    .bolt { fill: $bolt; font-size: 14px; }
+    .small { font-size: 11px; }
+  </style>
+  <rect x="1" y="1" width="778" height="468" rx="12" fill="$bg" stroke="$border" stroke-width="2"/>
+  <line x1="1" y1="46" x2="779" y2="46" stroke="$border" stroke-width="1"/>
+  <circle cx="28" cy="24" r="7" fill="#ff5f57"/>
+  <circle cx="52" cy="24" r="7" fill="#febc2e"/>
+  <circle cx="76" cy="24" r="7" fill="#28c840"/>
+  <text x="390" y="29" text-anchor="middle" class="t muted">diego@zar.mx: ~</text>
+
+  <!-- lightning bolt -->
+  <text x="44" y="110" class="t bolt">          ▄██████▀</text>
+  <text x="44" y="131" class="t bolt">         ▄█████▀</text>
+  <text x="44" y="152" class="t bolt">        ▄█████▀</text>
+  <text x="44" y="173" class="t bolt">       ▄█████▀</text>
+  <text x="44" y="194" class="t bolt">      ▄███████████▀</text>
+  <text x="44" y="215" class="t bolt">      ▀▀▀▀▄█████▀▀</text>
+  <text x="44" y="236" class="t bolt">        ▄█████▀</text>
+  <text x="44" y="257" class="t bolt">       ▄█████▀</text>
+  <text x="44" y="278" class="t bolt">      ▄█████▀</text>
+  <text x="44" y="299" class="t bolt">     ▄████▀</text>
+  <text x="44" y="320" class="t bolt">     ███▀</text>
+  <text x="44" y="341" class="t bolt">     ▀</text>
+  <text x="102" y="380" class="t muted">@thedackss</text>
+
+  <!-- stats -->
+  <text x="300" y="96"  class="t accent">diego@zar.mx</text>
+  <text x="300" y="117" class="t muted">─────────────────────────────────────</text>
+  <text x="300" y="138" class="t"><tspan class="label">OS</tspan>:       Debian 13 · Hyprland</text>
+  <text x="300" y="159" class="t"><tspan class="label">Host</tspan>:     Geoil Company · Frontend Dev</text>
+  <text x="300" y="180" class="t"><tspan class="label">Uptime</tspan>:   $uptime on GitHub</text>
+  <text x="300" y="201" class="t"><tspan class="label">Stack</tspan>:    TypeScript · React · Astro · NestJS</text>
+  <text x="300" y="222" class="t"><tspan class="label">Infra</tspan>:    Docker Swarm · Traefik · Cloudflare</text>
+  <text x="300" y="243" class="t muted">─────────────────────────────────────</text>
+  <text x="300" y="264" class="t"><tspan class="label">Repos</tspan>:    $repos public · <tspan class="label">Followers</tspan>: $followers</text>
+  <text x="300" y="285" class="t"><tspan class="label">Commits</tspan>:  $commits (all time)</text>
+  <text x="300" y="306" class="t"><tspan class="label">Lines</tspan>:    $loc_add++ · $loc_del-- · $loc_net net</text>
+  <text x="300" y="327" class="t muted">─────────────────────────────────────</text>
+  <text x="300" y="348" class="t"><tspan class="label">Email</tspan>:    diego@zar.mx</text>
+  <text x="300" y="369" class="t"><tspan class="label">Web</tspan>:      zar.mx</text>
+  <text x="300" y="390" class="t"><tspan class="label">LinkedIn</tspan>: in/diegozar02</text>
+  <text x="300" y="411" class="t muted">─────────────────────────────────────</text>
+  <text x="300" y="432" class="t muted small">Updated: $updated · rebuilt daily by GitHub Actions</text>
+</svg>
