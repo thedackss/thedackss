@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the profile card SVGs with live GitHub stats.
+"""Refresh the live-stats block in README.md (between CARD markers).
 
 Runs daily in GitHub Actions with the default GITHUB_TOKEN (public data only;
 restrictedContributionsCount covers private commit totals since the profile
@@ -8,24 +8,14 @@ has private contributions enabled).
 import datetime
 import json
 import os
-import string
+import re
 import time
 import urllib.request
 
 TOKEN = os.environ["GITHUB_TOKEN"]
 USER = os.environ.get("USER_NAME", "thedackss")
 API = "https://api.github.com"
-
-THEMES = {
-    "card-dark.svg": {
-        "bg": "#0d1117", "border": "#30363d", "fg": "#c9d1d9",
-        "accent": "#58a6ff", "muted": "#8b949e", "bolt": "#f1e05a",
-    },
-    "card-light.svg": {
-        "bg": "#ffffff", "border": "#d0d7de", "fg": "#24292f",
-        "accent": "#0969da", "muted": "#57606a", "bolt": "#b08800",
-    },
-}
+START, END = "<!--CARD:START-->", "<!--CARD:END-->"
 
 
 def call(url, payload=None):
@@ -93,27 +83,36 @@ def lines_of_code(repos):
 def main():
     user = call(f"{API}/users/{USER}")
     repo_list = call(f"{API}/users/{USER}/repos?per_page=100")
-    stars = sum(r["stargazers_count"] for r in repo_list)
     added, deleted = lines_of_code([r["name"] for r in repo_list])
+    commits = total_commits(user["created_at"])
+    sep = "─" * 46
 
-    values = {
-        "uptime": uptime(user["created_at"]),
-        "repos": user["public_repos"],
-        "stars": stars,
-        "followers": user["followers"],
-        "commits": f"{total_commits(user['created_at']):,}",
-        "loc_add": f"{added:,}",
-        "loc_del": f"{deleted:,}",
-        "loc_net": f"{added - deleted:,}",
-        "updated": datetime.date.today().isoformat(),
-    }
+    block = f"""{START}
+<pre>
+diego@zar.mx:~$ fetch
+{sep}
+OS:       Debian 13 · Hyprland
+Host:     Geoil Company · Frontend Dev
+Uptime:   {uptime(user["created_at"])} on GitHub
+Stack:    TypeScript · React · Astro · NestJS
+Infra:    Docker Swarm · Traefik · Cloudflare
+{sep}
+Repos:    {user["public_repos"]} public · Followers: {user["followers"]}
+Commits:  {commits:,} (all time)
+Lines:    {added:,}++ · {deleted:,}-- · {added - deleted:,} net
+{sep}
+Updated:  {datetime.date.today().isoformat()} · rebuilt daily by GitHub Actions
+</pre>
+{END}"""
 
-    template = string.Template(open("template.svg", encoding="utf-8").read())
-    for filename, theme in THEMES.items():
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(template.substitute(**theme, **values))
-        print(f"wrote {filename}")
-    print(json.dumps(values, indent=2))
+    readme = open("README.md", encoding="utf-8").read()
+    updated = re.sub(
+        re.escape(START) + r".*?" + re.escape(END),
+        block.replace("\\", r"\\"), readme, count=1, flags=re.S,
+    )
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(updated)
+    print(f"README updated: {commits:,} commits, {added:,}/{deleted:,} lines")
 
 
 if __name__ == "__main__":
