@@ -1,7 +1,7 @@
 <a href="https://github.com/thedackss">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thedackss/thedackss/main/dark_mode.svg">
-    <img alt="Diego Zamora (thedackss) — frontend developer in Villahermosa, México. Live GitHub stats card." src="https://raw.githubusercontent.com/thedackss/thedackss/main/light_mode.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thedackss/thedackss/main/card-dark.svg">
+    <img alt="Diego Zamora (thedackss) — frontend developer in Villahermosa, México. Live GitHub stats card." src="https://raw.githubusercontent.com/thedackss/thedackss/main/card-light.svg">
   </picture>
 </a>
 

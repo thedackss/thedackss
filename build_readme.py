@@ -17,11 +17,11 @@ USER = os.environ.get("USER_NAME", "thedackss")
 API = "https://api.github.com"
 
 THEMES = {
-    "dark_mode.svg": {
+    "card-dark.svg": {
         "bg": "#0d1117", "border": "#30363d", "fg": "#c9d1d9",
         "accent": "#58a6ff", "muted": "#8b949e", "bolt": "#f1e05a",
     },
-    "light_mode.svg": {
+    "card-light.svg": {
         "bg": "#ffffff", "border": "#d0d7de", "fg": "#24292f",
         "accent": "#0969da", "muted": "#57606a", "bolt": "#b08800",
     },
