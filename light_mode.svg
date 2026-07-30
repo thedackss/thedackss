@@ -39,8 +39,8 @@
   <text x="300" y="222" class="t"><tspan class="label">Infra</tspan>:    Docker Swarm · Traefik · Cloudflare</text>
   <text x="300" y="243" class="t muted">─────────────────────────────────────</text>
   <text x="300" y="264" class="t"><tspan class="label">Repos</tspan>:    7 public · <tspan class="label">Followers</tspan>: 3</text>
-  <text x="300" y="285" class="t"><tspan class="label">Commits</tspan>:  1,226 (all time)</text>
-  <text x="300" y="306" class="t"><tspan class="label">Lines</tspan>:    52,438++ · 26,783-- · 25,655 net</text>
+  <text x="300" y="285" class="t"><tspan class="label">Commits</tspan>:  1,227 (all time)</text>
+  <text x="300" y="306" class="t"><tspan class="label">Lines</tspan>:    52,427++ · 26,783-- · 25,644 net</text>
   <text x="300" y="327" class="t muted">─────────────────────────────────────</text>
   <text x="300" y="348" class="t"><tspan class="label">Email</tspan>:    diego@zar.mx</text>
   <text x="300" y="369" class="t"><tspan class="label">Web</tspan>:      zar.mx</text>
