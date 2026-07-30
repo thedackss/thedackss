@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="780" height="540" viewBox="0 0 780 540" xml:space="preserve" role="img" aria-label="Diego Zamora — GitHub profile card">
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" xml:space="preserve" role="img" aria-label="Diego Zamora — GitHub profile card">
   <style>
-    .t { font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 13px; fill: #c9d1d9; white-space: pre; }
+    .t { font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 16px; fill: #c9d1d9; white-space: pre; }
     .accent { fill: #58a6ff; font-weight: bold; }
     .label { fill: #ffa657; }
     .muted { fill: #8b949e; }
@@ -8,38 +8,36 @@
     .minus { fill: #f85149; }
     .small { font-size: 11px; }
   </style>
-  <rect x="0" y="0" width="780" height="540" rx="12" fill="#0d1117"/>
-  <line x1="0" y1="46" x2="780" y2="46" stroke="#30363d" stroke-width="1"/>
-  <text x="28" y="29" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted">:~$ </tspan>fetch</text>
+  <rect x="0" y="0" width="985" height="530" rx="12" fill="#0d1117"/>
 
   <!-- Zar lightning bolt (pixel-art logo) -->
-  <g transform="translate(46, 150) scale(8)">
+  <g transform="translate(40, 140) scale(9)">
     <path fill="#f4e625" d="M17 1H20V4H19V5H18V7H17V9H16V10H15V11H16V12H20V14H18V16H17V17H16V18H15V19H14V20H13V21H12V22H11V23H10V24H9V25H6V22H7V21H8V19H9V17H10V16H11V14H6V12H7V11H8V10H9V9H10V8H11V7H12V6H13V5H14V4H15V3H16V2H17Z"/>
     <path fill="#f5bb1a" d="M19 4h1v1h-1zM18 5h1v1h-1zM17 7h1v1h-1zM16 9h1v1h-1zM15 10h1v1h-1zM6 14h5v1H6zM18 14h2v1h-2zM18 15h1v1h-1zM17 16h1v1h-1zM16 17h1v1h-1zM15 18h1v1h-1zM14 19h1v1h-1zM13 20h1v1h-1zM12 21h1v1h-1zM11 22h1v1h-1zM10 23h1v1h-1zM9 24h1v1H9zM6 25h3v1H6z"/>
   </g>
-  <text x="150" y="405" text-anchor="middle" class="t muted">@thedackss</text>
+  <text x="157" y="412" text-anchor="middle" class="t muted">@thedackss</text>
 
-  <text x="280" y="88" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted"> ────────────────────────────────────────────-</tspan></text>
-  <text x="280" y="108" class="t"><tspan class="muted">. </tspan><tspan class="label">OS</tspan><tspan class="muted">: ................................ </tspan><tspan>Debian 13, Hyprland</tspan></text>
-  <text x="280" y="128" class="t"><tspan class="muted">. </tspan><tspan class="label">Host</tspan><tspan class="muted">: ................ </tspan><tspan>Geoil Company, Frontend Developer</tspan></text>
-  <text x="280" y="148" class="t"><tspan class="muted">. </tspan><tspan class="label">Uptime</tspan><tspan class="muted">: ...................... </tspan><tspan>7 years, 4 days on GitHub</tspan></text>
-  <text x="280" y="168" class="t"><tspan class="muted">. </tspan><tspan class="label">IDE</tspan><tspan class="muted">: .................................. </tspan><tspan>VSCode, DataGrip</tspan></text>
-  <text x="280" y="188" class="t"><tspan class="muted">.</tspan></text>
-  <text x="280" y="208" class="t"><tspan class="muted">. </tspan><tspan class="label">Languages.Programming</tspan><tspan class="muted">: ..... </tspan><tspan>TypeScript, JavaScript, SQL</tspan></text>
-  <text x="280" y="228" class="t"><tspan class="muted">. </tspan><tspan class="label">Frameworks</tspan><tspan class="muted">: ........ </tspan><tspan>React, Astro, NestJS, Angular, Vite</tspan></text>
-  <text x="280" y="248" class="t"><tspan class="muted">. </tspan><tspan class="label">Languages.Real</tspan><tspan class="muted">: ....................... </tspan><tspan>Spanish, English</tspan></text>
-  <text x="280" y="268" class="t"><tspan class="muted">. </tspan><tspan class="label">Infra</tspan><tspan class="muted">: .......... </tspan><tspan>Docker Swarm, Traefik, Cloudflare, AWS</tspan></text>
-  <text x="280" y="288" class="t"><tspan class="muted">.</tspan></text>
-  <text x="280" y="308" class="t"><tspan>- Contact</tspan><tspan class="muted"> ───────────────────────────────────────────────-</tspan></text>
-  <text x="280" y="328" class="t"><tspan class="muted">. </tspan><tspan class="label">Email</tspan><tspan class="muted">: .................................... </tspan><tspan>diego@zar.mx</tspan></text>
-  <text x="280" y="348" class="t"><tspan class="muted">. </tspan><tspan class="label">Web</tspan><tspan class="muted">: ............................................ </tspan><tspan>zar.mx</tspan></text>
-  <text x="280" y="368" class="t"><tspan class="muted">. </tspan><tspan class="label">LinkedIn</tspan><tspan class="muted">: ................................ </tspan><tspan>in/diegozar02</tspan></text>
-  <text x="280" y="388" class="t"><tspan class="muted">.</tspan></text>
-  <text x="280" y="408" class="t"><tspan>- GitHub Stats</tspan><tspan class="muted"> ──────────────────────────────────────────-</tspan></text>
-  <text x="280" y="428" class="t"><tspan class="muted">. </tspan><tspan class="label">Repos</tspan><tspan class="muted">: ....................... </tspan><tspan>7 public {Contributed: 1}</tspan></text>
-  <text x="280" y="448" class="t"><tspan class="muted">. </tspan><tspan class="label">Followers</tspan><tspan class="muted">: ........................................... </tspan><tspan>3</tspan></text>
-  <text x="280" y="468" class="t"><tspan class="muted">. </tspan><tspan class="label">Commits</tspan><tspan class="muted">: ......................................... </tspan><tspan>1,236</tspan></text>
-  <text x="280" y="488" class="t"><tspan class="muted">. </tspan><tspan class="label">Lines of Code</tspan><tspan class="muted">: ........... </tspan><tspan>25,644 ( </tspan><tspan class="plus">52,427++</tspan><tspan>, </tspan><tspan class="minus">26,783--</tspan><tspan> )</tspan></text>
-  <text x="280" y="508" class="t"><tspan class="muted">.</tspan></text>
-  <text x="280" y="528" class="t"><tspan class="muted">. </tspan><tspan class="label">Updated</tspan><tspan class="muted">: .................................... </tspan><tspan>2026-07-30</tspan></text>
+  <text x="300" y="48" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted"> ────────────────────────────────────────────────────-</tspan></text>
+  <text x="300" y="70" class="t"><tspan class="muted">. </tspan><tspan class="label">OS</tspan><tspan class="muted">: ........................................ </tspan><tspan>Debian 13, Hyprland</tspan></text>
+  <text x="300" y="92" class="t"><tspan class="muted">. </tspan><tspan class="label">Host</tspan><tspan class="muted">: ........................ </tspan><tspan>Geoil Company, Frontend Developer</tspan></text>
+  <text x="300" y="114" class="t"><tspan class="muted">. </tspan><tspan class="label">Uptime</tspan><tspan class="muted">: .............................. </tspan><tspan>7 years, 4 days on GitHub</tspan></text>
+  <text x="300" y="136" class="t"><tspan class="muted">. </tspan><tspan class="label">IDE</tspan><tspan class="muted">: .......................................... </tspan><tspan>VSCode, DataGrip</tspan></text>
+  <text x="300" y="158" class="t"><tspan class="muted">.</tspan></text>
+  <text x="300" y="180" class="t"><tspan class="muted">. </tspan><tspan class="label">Languages.Programming</tspan><tspan class="muted">: ............. </tspan><tspan>TypeScript, JavaScript, SQL</tspan></text>
+  <text x="300" y="202" class="t"><tspan class="muted">. </tspan><tspan class="label">Frameworks</tspan><tspan class="muted">: ................ </tspan><tspan>React, Astro, NestJS, Angular, Vite</tspan></text>
+  <text x="300" y="224" class="t"><tspan class="muted">. </tspan><tspan class="label">Languages.Real</tspan><tspan class="muted">: ............................... </tspan><tspan>Spanish, English</tspan></text>
+  <text x="300" y="246" class="t"><tspan class="muted">. </tspan><tspan class="label">Infra</tspan><tspan class="muted">: .................. </tspan><tspan>Docker Swarm, Traefik, Cloudflare, AWS</tspan></text>
+  <text x="300" y="268" class="t"><tspan class="muted">.</tspan></text>
+  <text x="300" y="290" class="t"><tspan>- Contact</tspan><tspan class="muted"> ───────────────────────────────────────────────────────-</tspan></text>
+  <text x="300" y="312" class="t"><tspan class="muted">. </tspan><tspan class="label">Email</tspan><tspan class="muted">: ............................................ </tspan><tspan>diego@zar.mx</tspan></text>
+  <text x="300" y="334" class="t"><tspan class="muted">. </tspan><tspan class="label">Web</tspan><tspan class="muted">: .................................................... </tspan><tspan>zar.mx</tspan></text>
+  <text x="300" y="356" class="t"><tspan class="muted">. </tspan><tspan class="label">LinkedIn</tspan><tspan class="muted">: ........................................ </tspan><tspan>in/diegozar02</tspan></text>
+  <text x="300" y="378" class="t"><tspan class="muted">.</tspan></text>
+  <text x="300" y="400" class="t"><tspan>- GitHub Stats</tspan><tspan class="muted"> ──────────────────────────────────────────────────-</tspan></text>
+  <text x="300" y="422" class="t"><tspan class="muted">. </tspan><tspan class="label">Repos</tspan><tspan class="muted">: ............................... </tspan><tspan>7 public {Contributed: 8}</tspan></text>
+  <text x="300" y="444" class="t"><tspan class="muted">. </tspan><tspan class="label">Followers</tspan><tspan class="muted">: ................................................... </tspan><tspan>3</tspan></text>
+  <text x="300" y="466" class="t"><tspan class="muted">. </tspan><tspan class="label">Commits</tspan><tspan class="muted">: ................................................. </tspan><tspan>1,236</tspan></text>
+  <text x="300" y="488" class="t"><tspan class="muted">. </tspan><tspan class="label">Lines of Code</tspan><tspan class="muted">: ................... </tspan><tspan>25,644 ( </tspan><tspan class="plus">52,427++</tspan><tspan>, </tspan><tspan class="minus">26,783--</tspan><tspan> )</tspan></text>
+  <text x="300" y="510" class="t"><tspan class="muted">.</tspan></text>
+  <text x="300" y="532" class="t"><tspan class="muted">. </tspan><tspan class="label">Updated</tspan><tspan class="muted">: ............................................ </tspan><tspan>2026-07-30</tspan></text>
 </svg>

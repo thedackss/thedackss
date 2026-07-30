@@ -17,9 +17,9 @@ TOKEN = os.environ["GITHUB_TOKEN"]
 USER = os.environ.get("USER_NAME", "thedackss")
 API = "https://api.github.com"
 
-WIDTH = 58        # line width in characters
-COL_X = 280       # x of the stats column
-Y0, DY = 88, 20   # first baseline, line height
+WIDTH = 66        # line width in characters
+COL_X = 300       # x of the stats column
+Y0, DY = 48, 22   # first baseline, line height
 
 THEMES = {
     "card-dark.svg": {
