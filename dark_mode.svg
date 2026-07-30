@@ -4,27 +4,18 @@
     .accent { fill: #58a6ff; font-weight: bold; }
     .label { fill: #58a6ff; }
     .muted { fill: #8b949e; }
-    .bolt { fill: #f1e05a; font-size: 14px; }
     .small { font-size: 11px; }
   </style>
   <rect x="1" y="1" width="778" height="468" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
   <line x1="1" y1="46" x2="779" y2="46" stroke="#30363d" stroke-width="1"/>
   <text x="28" y="29" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted">:~$ </tspan>fetch</text>
 
-  <!-- lightning bolt -->
-  <text x="44" y="110" class="t bolt">          ▄██████▀</text>
-  <text x="44" y="131" class="t bolt">         ▄█████▀</text>
-  <text x="44" y="152" class="t bolt">        ▄█████▀</text>
-  <text x="44" y="173" class="t bolt">       ▄█████▀</text>
-  <text x="44" y="194" class="t bolt">      ▄███████████▀</text>
-  <text x="44" y="215" class="t bolt">      ▀▀▀▀▄█████▀▀</text>
-  <text x="44" y="236" class="t bolt">        ▄█████▀</text>
-  <text x="44" y="257" class="t bolt">       ▄█████▀</text>
-  <text x="44" y="278" class="t bolt">      ▄█████▀</text>
-  <text x="44" y="299" class="t bolt">     ▄████▀</text>
-  <text x="44" y="320" class="t bolt">     ███▀</text>
-  <text x="44" y="341" class="t bolt">     ▀</text>
-  <text x="102" y="380" class="t muted">@thedackss</text>
+  <!-- Zar lightning bolt (pixel-art logo) -->
+  <g transform="translate(46, 84) scale(8)">
+    <path fill="#f4e625" d="M17 1H20V4H19V5H18V7H17V9H16V10H15V11H16V12H20V14H18V16H17V17H16V18H15V19H14V20H13V21H12V22H11V23H10V24H9V25H6V22H7V21H8V19H9V17H10V16H11V14H6V12H7V11H8V10H9V9H10V8H11V7H12V6H13V5H14V4H15V3H16V2H17Z"/>
+    <path fill="#f5bb1a" d="M19 4h1v1h-1zM18 5h1v1h-1zM17 7h1v1h-1zM16 9h1v1h-1zM15 10h1v1h-1zM6 14h5v1H6zM18 14h2v1h-2zM18 15h1v1h-1zM17 16h1v1h-1zM16 17h1v1h-1zM15 18h1v1h-1zM14 19h1v1h-1zM13 20h1v1h-1zM12 21h1v1h-1zM11 22h1v1h-1zM10 23h1v1h-1zM9 24h1v1H9zM6 25h3v1H6z"/>
+  </g>
+  <text x="150" y="340" text-anchor="middle" class="t muted">@thedackss</text>
 
   <!-- stats -->
   <text x="300" y="96"  class="t accent">diego@zar.mx</text>
