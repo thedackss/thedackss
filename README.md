@@ -5,8 +5,8 @@
   </picture>
 </a>
 
-- 🧩 Built a cross-browser extension with ~750 users (Chrome + Firefox, Manifest V3)
-- 🏠 Self-hosted homelab: 5-node mesh VPN, Docker Swarm, Traefik, Cloudflare Tunnels, and my own auth service
-- 🌱 OSS: PRs on [dbml-formatter](https://github.com/idoaflalo/dbml-formatter) — configurable indentation, dependency audit cleanup
+- Built a cross-browser extension with ~750 users (Chrome + Firefox, Manifest V3)
+- Self-hosted homelab: 5-node mesh VPN, Docker Swarm, Traefik, Cloudflare Tunnels, and my own auth service
+- OSS: PRs on [dbml-formatter](https://github.com/idoaflalo/dbml-formatter) — configurable indentation, dependency audit cleanup
 
 <!-- Concept inspired by Andrew6rant/Andrew6rant; implementation (script, template, art) is original. -->
