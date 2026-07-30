@@ -85,10 +85,10 @@ def main():
     repo_list = call(f"{API}/users/{USER}/repos?per_page=100")
     added, deleted = lines_of_code([r["name"] for r in repo_list])
     commits = total_commits(user["created_at"])
-    sep = "─" * 46
+    sep = "# " + "─" * 44
 
     block = f"""{START}
-<pre>
+```yaml
 diego@zar.mx:~$ fetch
 {sep}
 OS:       Debian 13 · Hyprland
@@ -101,8 +101,8 @@ Repos:    {user["public_repos"]} public · Followers: {user["followers"]}
 Commits:  {commits:,} (all time)
 Lines:    {added:,}++ · {deleted:,}-- · {added - deleted:,} net
 {sep}
-Updated:  {datetime.date.today().isoformat()} · rebuilt daily by GitHub Actions
-</pre>
+# Updated: {datetime.date.today().isoformat()} · rebuilt daily by GitHub Actions
+```
 {END}"""
 
     readme = open("README.md", encoding="utf-8").read()

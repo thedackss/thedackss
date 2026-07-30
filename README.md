@@ -1,21 +1,21 @@
 <img src="https://raw.githubusercontent.com/thedackss/thedackss/main/logo.svg" alt="Zar lightning bolt — Diego Zamora's logo" width="190" align="left">
 
 <!--CARD:START-->
-<pre>
+```yaml
 diego@zar.mx:~$ fetch
-──────────────────────────────────────────────
+# ────────────────────────────────────────────
 OS:       Debian 13 · Hyprland
 Host:     Geoil Company · Frontend Dev
 Uptime:   7 years, 4 days on GitHub
 Stack:    TypeScript · React · Astro · NestJS
 Infra:    Docker Swarm · Traefik · Cloudflare
-──────────────────────────────────────────────
+# ────────────────────────────────────────────
 Repos:    7 public · Followers: 3
 Commits:  1,234 (all time)
 Lines:    52,427++ · 26,783-- · 25,644 net
-──────────────────────────────────────────────
-Updated:  2026-07-30 · rebuilt daily by GitHub Actions
-</pre>
+# ────────────────────────────────────────────
+# Updated: 2026-07-30 · rebuilt daily by GitHub Actions
+```
 <!--CARD:END-->
 
 <br clear="left">
