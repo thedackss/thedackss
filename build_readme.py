@@ -153,7 +153,7 @@ def main():
         leader("LinkedIn", v("in/diegozar02")),
         spacer(),
         header("- GitHub Stats", None),
-        leader("Repos", v(f"{user['public_repos']} public {{Contributed: {contributed}}}")),
+        leader("Repos", v(f"{user['public_repos']} public")),
         leader("Followers", v(str(user["followers"]))),
         leader("Commits", v(f"{commits:,}")),
         leader("Lines of Code", [
