@@ -1,21 +1,38 @@
 #!/usr/bin/env python3
-"""Refresh the live-stats block in README.md (between CARD markers).
+"""Rebuild the profile card SVGs (card-dark.svg / card-light.svg).
 
-Runs daily in GitHub Actions with the default GITHUB_TOKEN (public data only;
-restrictedContributionsCount covers private commit totals since the profile
-has private contributions enabled).
+Neofetch-style layout with dot-leader lines: label left, value right-aligned,
+dots filling the gap (recomputed per run since values change length).
+Runs daily in GitHub Actions with the default GITHUB_TOKEN.
 """
 import datetime
 import json
 import os
-import re
+import string
 import time
 import urllib.request
+from xml.sax.saxutils import escape
 
 TOKEN = os.environ["GITHUB_TOKEN"]
 USER = os.environ.get("USER_NAME", "thedackss")
 API = "https://api.github.com"
-START, END = "<!--CARD:START-->", "<!--CARD:END-->"
+
+WIDTH = 58        # line width in characters
+COL_X = 280       # x of the stats column
+Y0, DY = 88, 20   # first baseline, line height
+
+THEMES = {
+    "card-dark.svg": {
+        "bg": "#0d1117", "border": "#30363d", "fg": "#c9d1d9",
+        "accent": "#58a6ff", "label": "#ffa657", "muted": "#8b949e",
+        "plus": "#3fb950", "minus": "#f85149",
+    },
+    "card-light.svg": {
+        "bg": "#ffffff", "border": "#d0d7de", "fg": "#24292f",
+        "accent": "#0969da", "label": "#953800", "muted": "#6e7781",
+        "plus": "#1a7f37", "minus": "#cf222e",
+    },
+}
 
 
 def call(url, payload=None):
@@ -45,15 +62,12 @@ def uptime(created_at):
     if anniversary > now:
         years -= 1
         anniversary = created.replace(year=created.year + years)
-    days = (now - anniversary).days
-    return f"{years} years, {days} days"
+    return f"{years} years, {(now - anniversary).days} days"
 
 
 def total_commits(created_at):
-    first_year = int(created_at[:4])
-    this_year = datetime.date.today().year
     total = 0
-    for year in range(first_year, this_year + 1):
+    for year in range(int(created_at[:4]), datetime.date.today().year + 1):
         data = graphql(f'''query {{ user(login: "{USER}") {{
             contributionsCollection(
                 from: "{year}-01-01T00:00:00Z", to: "{year}-12-31T23:59:59Z"
@@ -61,6 +75,13 @@ def total_commits(created_at):
         coll = data["user"]["contributionsCollection"]
         total += coll["totalCommitContributions"] + coll["restrictedContributionsCount"]
     return total
+
+
+def contributed_count():
+    data = graphql(f'''query {{ user(login: "{USER}") {{
+        repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST])
+        {{ totalCount }} }} }}''')
+    return data["user"]["repositoriesContributedTo"]["totalCount"]
 
 
 def lines_of_code(repos):
@@ -80,39 +101,81 @@ def lines_of_code(repos):
     return added, deleted
 
 
+# ---- line rendering ------------------------------------------------------
+
+def tspan(text, cls=None):
+    c = f' class="{cls}"' if cls else ""
+    return f"<tspan{c}>{escape(text)}</tspan>"
+
+
+def leader(label, parts):
+    """'. label: .... value' — parts is [(text, cls), ...] for the value."""
+    value_len = sum(len(t) for t, _ in parts)
+    dots = max(3, WIDTH - 2 - len(label) - 2 - value_len - 1)
+    return (tspan(". ", "muted") + tspan(label, "label")
+            + tspan(": " + "." * dots + " ", "muted")
+            + "".join(tspan(t, c) for t, c in parts))
+
+
+def header(title, cls="accent"):
+    dashes = max(3, WIDTH - len(title) - 1)
+    return tspan(title, cls) + tspan(" " + "─" * (dashes - 1) + "-", "muted")
+
+
+def spacer():
+    return tspan(".", "muted")
+
+
 def main():
     user = call(f"{API}/users/{USER}")
     repo_list = call(f"{API}/users/{USER}/repos?per_page=100")
     added, deleted = lines_of_code([r["name"] for r in repo_list])
     commits = total_commits(user["created_at"])
-    sep = "# " + "─" * 44
+    contributed = contributed_count()
+    today = datetime.date.today().isoformat()
 
-    block = f"""{START}
-```yaml
-diego@zar.mx:~$ fetch
-{sep}
-OS:       Debian 13 · Hyprland
-Host:     Geoil Company · Frontend Dev
-Uptime:   {uptime(user["created_at"])} on GitHub
-Stack:    TypeScript · React · Astro · NestJS
-Infra:    Docker Swarm · Traefik · Cloudflare
-{sep}
-Repos:    {user["public_repos"]} public · Followers: {user["followers"]}
-Commits:  {commits:,} (all time)
-Lines:    {added:,}++ · {deleted:,}-- · {added - deleted:,} net
-{sep}
-# Updated: {datetime.date.today().isoformat()} · rebuilt daily by GitHub Actions
-```
-{END}"""
+    v = lambda t: [(t, None)]
+    rows = [
+        header("diego@zar.mx"),
+        leader("OS", v("Debian 13, Hyprland")),
+        leader("Host", v("Geoil Company, Frontend Developer")),
+        leader("Uptime", v(f"{uptime(user['created_at'])} on GitHub")),
+        leader("IDE", v("VSCode, DataGrip")),
+        spacer(),
+        leader("Languages.Programming", v("TypeScript, JavaScript, SQL")),
+        leader("Frameworks", v("React, Astro, NestJS, Angular, Vite")),
+        leader("Languages.Real", v("Spanish, English")),
+        leader("Infra", v("Docker Swarm, Traefik, Cloudflare, AWS")),
+        spacer(),
+        header("- Contact", None),
+        leader("Email", v("diego@zar.mx")),
+        leader("Web", v("zar.mx")),
+        leader("LinkedIn", v("in/diegozar02")),
+        spacer(),
+        header("- GitHub Stats", None),
+        leader("Repos", v(f"{user['public_repos']} public {{Contributed: {contributed}}}")),
+        leader("Followers", v(str(user["followers"]))),
+        leader("Commits", v(f"{commits:,}")),
+        leader("Lines of Code", [
+            (f"{added - deleted:,} ( ", None),
+            (f"{added:,}++", "plus"), (", ", None),
+            (f"{deleted:,}--", "minus"), (" )", None),
+        ]),
+        spacer(),
+        leader("Updated", v(today)),
+    ]
 
-    readme = open("README.md", encoding="utf-8").read()
-    updated = re.sub(
-        re.escape(START) + r".*?" + re.escape(END),
-        block.replace("\\", r"\\"), readme, count=1, flags=re.S,
+    lines_xml = "\n".join(
+        f'  <text x="{COL_X}" y="{Y0 + i * DY}" class="t">{row}</text>'
+        for i, row in enumerate(rows)
     )
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(updated)
-    print(f"README updated: {commits:,} commits, {added:,}/{deleted:,} lines")
+
+    template = string.Template(open("template.svg", encoding="utf-8").read())
+    for filename, theme in THEMES.items():
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(template.substitute(**theme, LINES=lines_xml))
+        print(f"wrote {filename}")
+    print(f"stats: {commits:,} commits, +{added:,}/-{deleted:,}, contributed {contributed}")
 
 
 if __name__ == "__main__":
