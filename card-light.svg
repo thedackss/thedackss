@@ -20,7 +20,7 @@
   <text x="300" y="42" class="t"><tspan class="accent">diego@zar.mx</tspan><tspan class="muted"> ────────────────────────────────────────────────────-</tspan></text>
   <text x="300" y="63" class="t"><tspan class="muted">. </tspan><tspan class="label">OS</tspan><tspan class="muted">: ........................................ </tspan><tspan>Debian 13, Hyprland</tspan></text>
   <text x="300" y="84" class="t"><tspan class="muted">. </tspan><tspan class="label">Host</tspan><tspan class="muted">: ........................ </tspan><tspan>Geoil Company, Frontend Developer</tspan></text>
-  <text x="300" y="105" class="t"><tspan class="muted">. </tspan><tspan class="label">Uptime</tspan><tspan class="muted">: ............................. </tspan><tspan>7 years, 34 days on GitHub</tspan></text>
+  <text x="300" y="105" class="t"><tspan class="muted">. </tspan><tspan class="label">Uptime</tspan><tspan class="muted">: ............................. </tspan><tspan>7 years, 35 days on GitHub</tspan></text>
   <text x="300" y="126" class="t"><tspan class="muted">. </tspan><tspan class="label">IDE</tspan><tspan class="muted">: .......................................... </tspan><tspan>VSCode, DataGrip</tspan></text>
   <text x="300" y="147" class="t"><tspan class="muted">.</tspan></text>
   <text x="300" y="168" class="t"><tspan class="muted">. </tspan><tspan class="label">Languages.Programming</tspan><tspan class="muted">: ............. </tspan><tspan>TypeScript, JavaScript, SQL</tspan></text>
@@ -39,5 +39,5 @@
   <text x="300" y="441" class="t"><tspan class="muted">. </tspan><tspan class="label">Commits</tspan><tspan class="muted">: ................................................. </tspan><tspan>1,350</tspan></text>
   <text x="300" y="462" class="t"><tspan class="muted">. </tspan><tspan class="label">Lines of Code</tspan><tspan class="muted">: .................... </tspan><tspan>29,862 ( </tspan><tspan class="plus">38,715++</tspan><tspan>, </tspan><tspan class="minus">8,853--</tspan><tspan> )</tspan></text>
   <text x="300" y="483" class="t"><tspan class="muted">.</tspan></text>
-  <text x="300" y="504" class="t"><tspan class="muted">. </tspan><tspan class="label">Updated</tspan><tspan class="muted">: ............................................ </tspan><tspan>2026-08-29</tspan></text>
+  <text x="300" y="504" class="t"><tspan class="muted">. </tspan><tspan class="label">Updated</tspan><tspan class="muted">: ............................................ </tspan><tspan>2026-08-30</tspan></text>
 </svg>
